@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>BMW Street Race - Pro Edition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="tela-loja">
+        <h1>🏁 BMW STREET RACE</h1>
+        <div class="info-topo">
+            🏆 Recorde: <span id="recorde-loja">0</span> | 💰 Moedas: <span id="moedas-loja">0</span>
+        </div>
+
+        <div class="garagem">
+            <div class="card-carro selecionado" id="card-0" onclick="selecionarCarro(0, 'img/carro.png')">
+                <img src="img/carro.png">
+                <p>M3 Classic</p><span>Grátis</span>
+            </div>
+            <div class="card-carro" id="card-1" onclick="comprarCarro(1, 150, 'img/inimigo.png')">
+                <img src="img/inimigo.png">
+                <p>M4 Blue</p><span id="preco-1">💰 150</span>
+            </div>
+            <div class="card-carro" id="card-4" onclick="comprarCarro(4, 250, 'img/Onibus.png')">
+                <img src="img/Onibus.png">
+                <p>Ônibus</p><span id="preco-4">💰 250</span>
+            </div>
+            <div class="card-carro" id="card-2" onclick="comprarCarro(2, 400, 'img/inimigo1.png')">
+                <img src="img/inimigo1.png">
+                <p>M5 Night</p><span id="preco-2">💰 400</span>
+            </div>
+            <div class="card-carro" id="card-5" onclick="comprarCarro(5, 600, 'img/hilux.png')">
+                <img src="img/hilux.png">
+                <p>Hilux</p><span id="preco-5">💰 600</span>
+            </div>
+            <div class="card-carro" id="card-6" onclick="comprarCarro(6, 850, 'img/policia.png')">
+                <img src="img/policia.png">
+                <p>Policia</p><span id="preco-6">💰 850</span>
+            </div>
+            <div class="card-carro" id="card-3" onclick="comprarCarro(3, 1000, 'img/moto.png')">
+                <img src="img/moto.png" style="width: 40px;">
+                <p>S1000RR</p><span id="preco-3">💰 1000</span>
+            </div>
+        </div>
+
+        <button id="btn-start" onclick="iniciarJogo()">START RACE</button>
+    </div>
+
+    <div class="hud">
+        <div id="placar">Pontos: 0</div>
+        <div id="moedas-hud">💰: 0</div>
+        <div id="status">Status: Normal</div>
+    </div>
+
+    <div class="estrada" id="estrada">
+        <div class="faixas"></div>
+        <div id="carro"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
